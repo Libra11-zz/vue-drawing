@@ -24,78 +24,82 @@
 
 <script>
   export default {
-    name: 'color-board',
-    data () {
+    name: "color-board",
+    data() {
       return {
         colors: [
-          '#000000',
-          '#2f2f2f',
-          '#ff0000',
-          '#00ff00',
-          '#0000ff',
-          '#ffff00',
-          '#ff00ff',
-          '#00ffff'
+          "#000000",
+          "#2f2f2f",
+          "#ff0000",
+          "#00ff00",
+          "#0000ff",
+          "#ffff00",
+          "#ff00ff",
+          "#00ffff"
         ],
         current: 0
-      }
+      };
     },
     computed: {
-      colorsFirstHalf () {
-        return this.colors.slice(0, this.colors.length / 2)
+      colorsFirstHalf() {
+        return this.colors.slice(0, this.colors.length / 2);
       },
-      colorsSecondHalf () {
-        return this.colors.slice(this.colors.length / 2)
+      colorsSecondHalf() {
+        return this.colors.slice(this.colors.length / 2);
       }
     },
     methods: {
-      change (index) {
-        this.current = index
-        this.$emit('color-selected', this.colors[index])
+      change(index) {
+        this.current = index;
+        this.$emit("color-selected", this.colors[index]);
       }
     }
-  }
+  };
 </script>
 
 <style scoped lang="scss">
-  * {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+
+.board {
+  border: #e8e8e8e8 solid 0.05em;
+  border-radius: 0.2em;
+  height: 2.5em;
+  position: relative;
+  padding: 0.2em;
+
+  .current {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 50%;
+    left: 0.3em;
+    transform: translateY(-50%);
   }
 
-  .board {
-    border: #e8e8e8e8 solid .05em;
-    border-radius: .2em;
-    height: 2.5em;
+  .bar {
     position: relative;
-    padding: .2em;
-
-    .current {
-      width: 2em;
-      height: 2em;
-      position: absolute;
-      top: 50%;
-      left: .3em;
-      transform: translateY(-50%);
-    }
-
-    .bar {
-      position: relative;
-      left: 2.5em;
-      height: 1em;
-      width: 6.7em;
-      margin: 0;
-      padding: .1em;
-    }
+    left: 2.5em;
+    height: 1em;
+    width: 6.7em;
+    margin: 0;
+    padding: 0.1em;
   }
-
-  .cell {
-    width: .8em;
-    height: .8em;
-    float: left;
-    margin-left: .2em;
-  }
-
-  .cell:hover {
+  &:hover {
     cursor: pointer;
+    border: #dd0000 solid 0.05em;
   }
+}
+
+.cell {
+  width: 0.8em;
+  height: 0.8em;
+  float: left;
+  margin-left: 0.2em;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
 </style>
