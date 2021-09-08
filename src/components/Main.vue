@@ -128,7 +128,7 @@
 }
 
 .options {
-  width: 600px;
+  width: 900px;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;

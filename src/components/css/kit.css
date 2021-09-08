@@ -13,7 +13,7 @@
   border: #dd0000 solid 1px;
 }
 
-img {
+.box img {
   display: block;
   position: relative;
   height: 1.5em;

@@ -1,7 +1,7 @@
 <!--
  * @Author: Libra
  * @Date: 2021-07-16 13:53:26
- * @LastEditTime: 2021-07-28 17:01:41
+ * @LastEditTime: 2021-07-29 17:19:20
  * @LastEditors: Libra
  * @Description: 
  * @FilePath: /vue-drawing/src/components/kits/export-control.vue
@@ -22,7 +22,7 @@
 
 <style scoped>
 .insert-container {
-  width: 600px;
+  width: 900px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -31,18 +31,15 @@
   width: 80px;
   height: 40px;
   margin-top: 10px;
-  background-color: #fff;
-  color: #000;
+  background-color: #dd0000;
+  color: #fff;
   cursor: pointer;
   display: flex;
-  border: 1px solid #ccc;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
 }
 .insert:hover {
-  background-color: #dd0000;
-  border: none;
-  color: #fff;
+  background-color: rgba(255, 0, 0, 0.8);
 }
 </style>
